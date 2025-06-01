@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 🐐 | Goat Bot V2 ]";
+const doNotDelete = "[ 💝🪽 | 𝐊𝐋𝐃-NextBot V7🖤]";
 /**
 * @author NTKhang
 * @author: do not delete it
@@ -100,23 +100,23 @@ module.exports = {
 			pageNotFound: "Trang %1 không tồn tại"
 		},
 		en: {
-			help: "╭─────────────⭓"
+			help: "╭─────────────🍻🤍"
 				+ "\n%1"
-				+ "\n├─────⭔"
+				+ "\n├─────🍻🤍"
 				+ "\n│ Page [ %2/%3 ]"
 				+ "\n│ Currently, the bot has %4 commands that can be used"
 				+ "\n│ » Type %5help <page> to view the command list"
 				+ "\n│ » Type %5help to view the details of how to use that command"
 				+ "\n├────────⭔"
 				+ "\n│ %6"
-				+ "\n╰─────────────⭓",
+				+ "\n╰─────────────🍻🤍",
 			help2: "%1├───────⭔"
-				+ "\n│ » Currently, the bot has %2 commands that can be used"
-				+ "\n│ » Type %3help <command name> to view the details of how to use that command"
+				+ "\n│ » 𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆, 𝘁𝗵𝗲 𝗯𝗼𝘁 𝗵𝗮𝘀 %2 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀🔥 𝘁𝗵𝗮𝘁 𝗰𝗮𝗻 𝗯𝗲 used🙏🏼🪽"
+				+ "\n│ » 𝑻𝒚𝒑𝒆 %3help <𝒄𝒐𝒎𝒎𝒂𝒏𝒅 𝒏𝒂𝒎𝒆> 📚𝒕𝒐 𝒗𝒊𝒆𝒘 𝐭𝐡𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬 𝐨𝐟 𝐡𝐨𝐰 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐚𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝🧏🏼‍♂️"
 				+ "\n│ %4"
-				+ "\n╰─────────────⭓",
+				+ "\n╰─────────────🍻🤍",
 			commandNotFound: "Command \"%1\" does not exist",
-			getInfoCommand: "╭── NAME ────⭓"
+			getInfoCommand: "╭── NAME ────🍻🤍"
 				+ "\n│ %1"
 				+ "\n├── INFO"
 				+ "\n│ Description: %2"
@@ -131,8 +131,8 @@ module.exports = {
 				+ "\n├── NOTES"
 				+ "\n│ The content inside <XXXXX> can be changed"
 				+ "\n│ The content inside [a|b|c] is a or b or c"
-				+ "\n╰──────⭔",
-			onlyInfo: "╭── INFO ────⭓"
+				+ "\n╰──────🍻🤍",
+			onlyInfo: "╭── INFO ────🍻🤍"
 				+ "\n│ Command name: %1"
 				+ "\n│ Description: %2"
 				+ "\n│ Other names: %3"
@@ -141,17 +141,17 @@ module.exports = {
 				+ "\n│ Role: %6"
 				+ "\n│ Time per command: %7s"
 				+ "\n│ Author: %8"
-				+ "\n╰─────────────⭓",
-			onlyUsage: "╭── USAGE ────⭓"
+				+ "\n╰─────────────🍻🤍",
+			onlyUsage: "╭── USAGE ────🍻🤍"
 				+ "\n│%1"
-				+ "\n╰─────────────⭓",
-			onlyAlias: "╭── ALIAS ────⭓"
+				+ "\n╰─────────────🍻🤍",
+			onlyAlias: "╭── ALIAS ────🍻🤍"
 				+ "\n│ Other names: %1"
 				+ "\n│ Other names in your group: %2"
-				+ "\n╰─────────────⭓",
-			onlyRole: "╭── ROLE ────⭓"
+				+ "\n╰─────────────🍻🤍",
+			onlyRole: "╭── ROLE ────🍻🤍"
 				+ "\n│%1"
-				+ "\n╰─────────────⭓",
+				+ "\n╰─────────────🍻🤍",
 			doNotHave: "Do not have",
 			roleText0: "0 (All users)",
 			roleText1: "1 (Group administrators)",
