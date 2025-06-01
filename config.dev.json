@@ -17,7 +17,12 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100086568053014"],
+    "100086568053014",
+  "7806338982744601",
+  "61554245590654",
+  "61575781365723",
+  "100087638424159",
+  "100084111520171"],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
@@ -131,10 +136,10 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": false,
+    "selfListen": true,
     "selfListenEvent": true,
-    "autoMarkDelivery": false,
-    "autoReconnect": false,
+    "autoMarkDelivery": true,
+    "autoReconnect": true,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   }
 }
