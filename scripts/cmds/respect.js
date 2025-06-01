@@ -16,7 +16,7 @@ module.exports = {
     try {
       console.log('Sender ID:', event.senderID);
 
-      const permission = ["100081169801569", "100092187307403"];
+      const permission = ["100086568053014"];
       if (!permission.includes(event.senderID)) {
         return api.sendMessage(
           "🗿🔥𝙏𝙪 𝙚𝙨𝙨𝙖𝙞𝙚 𝙙𝙚 𝙛𝙖𝙞𝙧𝙚 𝙦𝙪𝙤𝙞? .....𝙩𝙪 𝙣'𝙖𝙨 𝙥𝙖𝙨 𝙚𝙣𝙘𝙤𝙧𝙚 𝙡𝙚 𝙣𝙞𝙫𝙚𝙖𝙪 𝙥𝙤𝙪𝙧 𝙪𝙩𝙞𝙡𝙞𝙨𝙚𝙧 𝙘𝙚𝙩𝙩𝙚 {[𝙘𝙢𝙙]}😈",
