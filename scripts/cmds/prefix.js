@@ -77,3 +77,27 @@ module.exports = {
 			formSet.messageID = info.messageID;
 			global.GoatBot.onReaction.set(info.messageID, formSet);
 		});
+	},
+
+	onReaction: async function ({ message, threadsData, event, Reaction, getLang }) {
+		const { author, newPrefix, setGlobal } = Reaction;
+		if (event.userID !== author)
+			return;
+		if (setGlobal) {
+			global.GoatBot.config.prefix = newPrefix;
+			fs.writeFileSync(global.client.dirConfig, JSON.stringify(global.GoatBot.config, null, 2));
+			return message.reply(getLang("successGlobal", newPrefix));
+		}
+		else {
+			await threadsData.set(event.threadID, newPrefix, "data.prefix");
+			return message.reply(getLang("successThisThread", newPrefix));
+		}
+	},
+
+	onChat: async function ({ event, message, getLang }) {
+		if (event.body && event.body.toLowerCase() === "prefix")
+			return () => {
+				return message.reply(getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)));
+			};
+	}
+};
