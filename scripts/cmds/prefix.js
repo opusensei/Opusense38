@@ -45,7 +45,7 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "⚙️ 𝗦𝘆𝘀𝘁𝗲𝗺 𝗽𝗿𝗲𝗳𝗶𝘅 ☛{%1}\n🏢 𝗬𝗼𝘂𝗿 𝗯𝗼𝘅 𝗰𝗵𝗮𝘁 𝗽𝗿𝗲𝗳𝗶𝘅 ☛{%2}\n ✨🏆𝐹𝑖𝑟𝑠𝑡 𝐴𝑑𝑚𝑖𝑛🏆✨☞https://www.facebook.com/iascani☜\n✨🏆"𝑆𝑒𝑐𝑜𝑛𝑑 𝐴𝑑𝑚𝑖𝑛🏆✨☞https://www.facebook.com/ultimate.paradokx☜\n ✨🏆𝐹𝑖𝑛𝑎𝑙 𝐴𝑑𝑚𝑖𝑛🏆✨☞https://www.facebook.com/lonko.dilane☜ "
+			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
 		}
 	},
 
@@ -77,27 +77,3 @@ module.exports = {
 			formSet.messageID = info.messageID;
 			global.GoatBot.onReaction.set(info.messageID, formSet);
 		});
-	},
-
-	onReaction: async function ({ message, threadsData, event, Reaction, getLang }) {
-		const { author, newPrefix, setGlobal } = Reaction;
-		if (event.userID !== author)
-			return;
-		if (setGlobal) {
-			global.GoatBot.config.prefix = newPrefix;
-			fs.writeFileSync(global.client.dirConfig, JSON.stringify(global.GoatBot.config, null, 2));
-			return message.reply(getLang("successGlobal", newPrefix));
-		}
-		else {
-			await threadsData.set(event.threadID, newPrefix, "data.prefix");
-			return message.reply(getLang("successThisThread", newPrefix));
-		}
-	},
-
-	onChat: async function ({ event, message, getLang }) {
-		if (event.body && event.body.toLowerCase() === "prefix")
-			return () => {
-				return message.reply(getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)));
-			};
-	}
-};
